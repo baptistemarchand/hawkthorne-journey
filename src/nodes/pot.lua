@@ -104,9 +104,8 @@ function Pot:keypressed(key, player)
             self.held = false
 			self.thrown = true
 			self.floor = player.position.y + player.height - self.height
-			self.velocity.x = ((player.direction == "left") and -1 or 1)
-                                          * (250 + player.velocity.x)
-			self.velocity.y = -player.velocity.x
+			self.velocity.x = ((player.direction == "left") and -1 or 1) * 500
+			self.velocity.y = 0
             self.collider:setGhost(self.bb)
 		end
 	end
